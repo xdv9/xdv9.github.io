@@ -1,3 +1,12 @@
+document.getElementById("university").addEventListener('change', () => {
+    if(document.getElementById("university").value == 'ninevah'){
+        document.getElementById("logo").setAttribute('src', './ninevah.jpg');
+    }
+    if(document.getElementById("university").value == 'mosul'){
+        document.getElementById("logo").setAttribute('src', './mosul.jpg');
+    }
+})
+
 // The topics and Keys
 
 var topics;
