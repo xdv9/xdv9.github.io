@@ -189,6 +189,7 @@ document.getElementById("start").addEventListener('click', function(){
     {
         var form = document.createElement('form');
         form.setAttribute('id', 'stage' + i);
+        form.classList.add('stage');
         form.style = 'display: none';
         contaienr.appendChild(form);
         var object = topics[(i - 1)];
@@ -214,19 +215,28 @@ document.getElementById("start").addEventListener('click', function(){
 
         form.appendChild(heading);
 
+        
+
         // Create field for every topic
 
         for (const property in object)
         {
+
+            // Create the contrainer
+
+            var cont = document.createElement('div');
+            cont.classList.add('subField');
+            form.appendChild(cont);
+
             var label = document.createElement('label');
             label.setAttribute('for', property);
             label.innerHTML = object[property];
-            form.appendChild(label);
+            cont.appendChild(label);
 
             var select = document.createElement('select');
             select.setAttribute('id', property);
             select.classList.add('subject');
-            form.appendChild(select);
+            cont.appendChild(select);
 
             var opt1 = document.createElement('option');
             opt1.setAttribute('value', 50);
@@ -260,6 +270,7 @@ document.getElementById("start").addEventListener('click', function(){
         var classDeg = document.createElement('input');
         classDeg.setAttribute('type', 'text');
         classDeg.setAttribute('id', `classDeg${i}`);
+        classDeg.setAttribute('placeholder', 'المعدل السنوي')
         form.appendChild(classDeg);
 
         // Create the Next button

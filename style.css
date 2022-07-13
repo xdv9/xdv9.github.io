@@ -1,0 +1,139 @@
+* {
+    margin: none;
+    padding: none;
+    box-sizing: border-box;
+}
+
+html { height:100%; }
+body { position:absolute; top:0; bottom:0; right:0; left:0; font-family: 'Kalam', cursive;}
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Merienda&display=swap');
+
+select {
+    font-family: 'Amiri', serif;
+    color: white;
+    background-color: rgb(23 97 168 / 64%);
+}
+
+input {
+    font-family: 'Amiri', serif;
+    text-align: center;
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+/* Cover */
+
+#cover {
+    position: fixed;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Kalam', cursive;
+}
+
+img {
+    width: 60%;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+#stage, #start {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 20px;
+    height: 40px;
+    font-family: 'Kalam', cursive;
+    background-color: rgb(23 97 168 / 64%);
+    border-radius: 15px;
+    color: white;
+}
+
+#start{
+    color: black;
+    background-color: white;
+    box-shadow: 1px 1px #d9d2d2;
+}
+
+#instruction h3 {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+#instruction p{
+    direction: rtl;
+    font-size: 1.1rem;
+    font-family: 'Amiri', serif;
+    text-align: justify;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+}
+
+/* Start of Stages */
+
+.stage {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.subField {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: rgb(23 97 168 / 64%);
+    border-radius: 15px;
+    color: white;
+    padding: 5px 10px;
+}
+
+.subField label {
+    text-align: left;
+    display: inline-block;
+    width: 70%;
+}
+
+.subField select {
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+    background-color: transparent;
+    border: none;
+}
+
+.next {
+    background-color: transparent;
+    border: none;
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 1px 1px #aaa, -1px -1px #aaa;
+    border-radius: 30px;
+    padding: 5px;
+    color: rgb(23 97 168 / 64%);
+    font-family: 'Kalam', cursive;
+    font-size: 1.1rem;
+}
+
+/* Result */
+
+#result {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#res {
+    background-color: rgb(23 97 168 / 64%);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+}

@@ -5,11 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice Marks</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet"> 
 </head>
 <body>
 
     <div id="container">
         <div id="cover">
+
+
+            <img src="./dice.jpg" />
+
+            <div id="instruction">
+                <h3>Dice Marks</h3>
+                <p>
+                    يرجى اختيار المرحلة الناجح اليها<br />
+                    سوف تظهر كل مرحلة بموادها حيث يمكنك اختيار التقدير لكل مادة<br />
+                    هناك حقل في كل مرحلة (المعدل السنوي) في حالة توفره فأنه يغنيك عن اختيار كل مادة على حدا<br />
+                    عند الإنتهاء سوف تظهر لك النتيجة النهائية، علما انها نتيجة تقريبية  
+                </p>
+            </div>
+
             <!-- Stage -->
     
             <select id="stage">
@@ -28,7 +47,9 @@
     </div>
 
     <div id="result" style="display: none;">
-        Result: <span id="res"></span>
+        <h2>Result</h2>
+        <p id="res"></p>
+        <img src="./dice.jpg" />
     </div>
 
 
