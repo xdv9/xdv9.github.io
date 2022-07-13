@@ -35,7 +35,7 @@ input {
 }
 
 img {
-    width: 60%;
+    width: 50%;
     display: block;
     margin: 0 auto 20px auto;
 }
@@ -51,6 +51,7 @@ img {
     background-color: rgb(23 97 168 / 64%);
     border-radius: 15px;
     color: white;
+    font-size: 1.3rem;
 }
 
 #start{
@@ -66,7 +67,7 @@ img {
 
 #instruction p{
     direction: rtl;
-    font-size: 1.1rem;
+    font-size: .9rem;
     font-family: 'Amiri', serif;
     text-align: justify;
     border-top: 1px solid black;

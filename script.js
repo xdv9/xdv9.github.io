@@ -162,6 +162,22 @@ const nextButtonAction = function (stg)
         // Show the Result
         document.getElementById("result").style = 'display: block';
 
+        if(stage == 2) {
+            finalRes = (finalRes * 100) / 5;
+        }
+        if(stage == 3) {
+            finalRes = (finalRes * 100) / 10;
+        }
+        if(stage == 4) {
+            finalRes = (finalRes * 100) / 15;
+        }
+        if(stage == 5) {
+            finalRes = (finalRes * 100) / 35;
+        }
+        if(stage == 6) {
+            finalRes = (finalRes * 100) / 60;
+        }
+
         document.querySelector('#result #res').innerHTML = `${finalRes.toFixed(2)} - ${(finalRes + 10).toFixed(2)}`;
 
     } else {        
