@@ -1,115 +1,14 @@
 // The topics and Keys
-var topics = [
-    {
-        'ana1'  : 'Anatomy',
-        'chem'  : 'Chemistry',
-        'bio'   : 'Biology',
-        'comp'  : 'Computer',
-        'phys'  : 'Physics',
-        'found' : 'Foundation of Medicine',
-        'hum'   : 'Human Rights'
-    },
-    {
-        'ana2'  : 'Anatomy',
-        'bioch' : 'Biochemistry',
-        'hist'  : 'Histology',
-        'emb'   : 'Embryology',
-        'phy'   : 'Physiology'
-    },
-    {
-        'phar'  : 'Pharmacology',
-        'mic'   : 'Microbiology',
-        'para'  : 'Parasitology',
-        'path'  : 'Pathology',
-        'com1'  : 'Community Medicine',
-        'med1'  : 'Medicine',
-        'sur1'  : 'Surgery',
-    },{
-        'med2'  : 'Medicine',
-        'sur2'  : 'Surgery',
-        'eth'   : 'Medical Ethics',
-        'com2'  : 'Community Medicine',
-        'for'   : 'Forensic Medicine',
-        'beh'   : 'Behavtioral Scinces',
-        'obs'   : 'Obstetric',
-    },
-    {
-        'med3'  : 'Medicine',
-        'sur3'  : 'Surgery',
-        'gyn1'   : 'Gynecology',
-        'ped1'   : 'Pediatrics',
-        'oph'   : 'Ophthalmology',
-        'psy'   : 'Psychiatry',
-        'rad'   : 'Radiology',
-        'der'   : 'Dermatology',
-        'ent'   : 'ENT',
-    },
-    {
-        'med4'  : 'Medicine',
-        'sur4'  : 'Surgery',
-        'gyn2'  : 'Gynceology',
-        'ped2'  : 'Pediatric',
-    }
-];
-// The topics and units
-var units = [
-    {
-        'ana1'  : 8,
-        'chem'  : 6,
-        'bio'   : 6,
-        'comp'  : 4,
-        'phys'  : 5,
-        'found' : 2,
-        'hum'   : 2
-    },
-    {
-        'ana2'  : 10,
-        'bioch' : 8,
-        'hist'  : 6,
-        'emb'   : 2,
-        'phy'   : 13
-    },
-    {
-        'phar'  : 8,
-        'mic'   : 8,
-        'para'  : 6,
-        'path'  : 12,
-        'com1'  : 3,
-        'med1'  : 5,
-        'sur1'  : 2,
-    },{
-        'med2'  : 12,
-        'sur2'  : 9,
-        'eth'   : 2,
-        'com2'  : 11,
-        'for'   : 6,
-        'beh'   : 2,
-        'obs'   : 7,
-    },
-    {
-        'med3'  : 7,
-        'sur3'  : 9,
-        'gyn1'  : 6,
-        'ped1'  : 6,
-        'oph'   : 3,
-        'psy'   : 4,
-        'rad'   : 2,
-        'der'   : 3,
-        'ent'   : 3,
-    },
-    {
-        'med4'  : 12,
-        'sur4'  : 12,
-        'gyn2'  : 10,
-        'ped2'  : 10,
-    }
-];
 
-// stage units
+var topics;
 
-var stgUnits = [33, 39, 44, 49, 43, 44];
+var units;
 
-var stgPercent = [5, 5, 5, 20, 25, 40];
+var stgUnits;
+
+var stgPercent;
+
+
 
 var finalRes = 0;
 
@@ -185,6 +84,230 @@ const nextButtonAction = function (stg)
 
 // Start Button
 document.getElementById("start").addEventListener('click', function(){
+
+    // Check University
+    
+    var university = document.getElementById("university").value;
+
+    if (university == 'ninevah'){
+
+        topics = [
+            {
+                'ana1'  : 'Anatomy',
+                'chem'  : 'Chemistry',
+                'bio'   : 'Biology',
+                'comp'  : 'Computer',
+                'phys'  : 'Physics',
+                'found' : 'Foundation of Medicine',
+                'hum'   : 'Human Rights'
+            },
+            {
+                'ana2'  : 'Anatomy',
+                'bioch' : 'Biochemistry',
+                'hist'  : 'Histology',
+                'emb'   : 'Embryology',
+                'phy'   : 'Physiology'
+            },
+            {
+                'phar'  : 'Pharmacology',
+                'mic'   : 'Microbiology',
+                'para'  : 'Parasitology',
+                'path'  : 'Pathology',
+                'com1'  : 'Community Medicine',
+                'med1'  : 'Medicine',
+                'sur1'  : 'Surgery',
+            },{
+                'med2'  : 'Medicine',
+                'sur2'  : 'Surgery',
+                'eth'   : 'Medical Ethics',
+                'com2'  : 'Community Medicine',
+                'for'   : 'Forensic Medicine',
+                'beh'   : 'Behavtioral Scinces',
+                'obs'   : 'Obstetric',
+            },
+            {
+                'med3'  : 'Medicine',
+                'sur3'  : 'Surgery',
+                'gyn1'   : 'Gynecology',
+                'ped1'   : 'Pediatrics',
+                'oph'   : 'Ophthalmology',
+                'psy'   : 'Psychiatry',
+                'rad'   : 'Radiology',
+                'der'   : 'Dermatology',
+                'ent'   : 'ENT',
+            },
+            {
+                'med4'  : 'Medicine',
+                'sur4'  : 'Surgery',
+                'gyn2'  : 'Gynceology',
+                'ped2'  : 'Pediatric',
+            }
+        ];
+        units = [
+            {
+                'ana1'  : 8,
+                'chem'  : 6,
+                'bio'   : 6,
+                'comp'  : 4,
+                'phys'  : 5,
+                'found' : 2,
+                'hum'   : 2
+            },
+            {
+                'ana2'  : 10,
+                'bioch' : 8,
+                'hist'  : 6,
+                'emb'   : 2,
+                'phy'   : 13
+            },
+            {
+                'phar'  : 8,
+                'mic'   : 8,
+                'para'  : 6,
+                'path'  : 12,
+                'com1'  : 3,
+                'med1'  : 5,
+                'sur1'  : 2,
+            },{
+                'med2'  : 12,
+                'sur2'  : 9,
+                'eth'   : 2,
+                'com2'  : 11,
+                'for'   : 6,
+                'beh'   : 2,
+                'obs'   : 7,
+            },
+            {
+                'med3'  : 7,
+                'sur3'  : 9,
+                'gyn1'  : 6,
+                'ped1'  : 6,
+                'oph'   : 3,
+                'psy'   : 4,
+                'rad'   : 2,
+                'der'   : 3,
+                'ent'   : 3,
+            },
+            {
+                'med4'  : 12,
+                'sur4'  : 12,
+                'gyn2'  : 10,
+                'ped2'  : 10,
+            }
+        ];        
+        stgUnits = [33, 39, 44, 49, 43, 44];
+        stgPercent = [5, 5, 5, 20, 25, 40];
+    }
+    if (university == 'mosul'){
+        topics = [
+            {
+                'ana1'  : 'Anatomy',
+                'chem'  : 'Chemistry',
+                'bio'   : 'Biology',
+                'comp'  : 'Computer',
+                'phys'  : 'Physics',
+                'found' : 'Foundation of Medicine',
+                'hum'   : 'Human Rights',
+                'eth'   : 'Medical Ethics'
+            },
+            {
+                'ana2'  : 'Anatomy',
+                'bioch' : 'Biochemistry',
+                'hist'  : 'Histology',
+                'emb'   : 'Embryology',
+                'phy'   : 'Physiology'
+            },
+            {
+                'phar'  : 'Pharmacology',
+                'mic'   : 'Microbiology',
+                'para'  : 'Parasitology',
+                'path'  : 'Pathology',
+                'com1'  : 'Community Medicine',
+                'med1'  : 'Medicine',
+                'sur1'  : 'Surgery',
+            },{
+                'med2'  : 'Medicine',
+                'sur2'  : 'Surgery',
+                'com2'  : 'Community Medicine',
+                'for'   : 'Forensic Medicine',
+                'beh'   : 'Behavtioral Scinces',
+                'obs'   : 'Obstetric',
+            },
+            {
+                'med3'  : 'Medicine',
+                'sur3'  : 'Surgery',
+                'gyn1'   : 'Gynecology',
+                'ped1'   : 'Pediatrics',
+                'oph'   : 'Ophthalmology',
+                'psy'   : 'Psychiatry',
+                'rad'   : 'Radiology',
+                'der'   : 'Dermatology',
+                'ent'   : 'ENT',
+                'fam'   : 'Family Medicine'
+            },
+            {
+                'med4'  : 'Medicine',
+                'sur4'  : 'Surgery',
+                'gyn2'  : 'Gynceology',
+                'ped2'  : 'Pediatric',
+            }
+        ];
+        units = [
+            {
+                'ana1'  : 8,
+                'chem'  : 6,
+                'bio'   : 6,
+                'comp'  : 4,
+                'phys'  : 5,
+                'found' : 2,
+                'hum'   : 2,
+                'eth'   : 2
+            },
+            {
+                'ana2'  : 10,
+                'bioch' : 8,
+                'hist'  : 6,
+                'emb'   : 2,
+                'phy'   : 13
+            },
+            {
+                'phar'  : 8,
+                'mic'   : 8,
+                'para'  : 6,
+                'path'  : 12,
+                'com1'  : 3,
+                'med1'  : 6,
+                'sur1'  : 2,
+            },{
+                'med2'  : 12,
+                'sur2'  : 8,
+                'com2'  : 11,
+                'for'   : 6,
+                'beh'   : 2,
+                'obs'   : 7,
+            },
+            {
+                'med3'  : 6,
+                'sur3'  : 8,
+                'gyn1'  : 6,
+                'ped1'  : 6,
+                'oph'   : 3,
+                'psy'   : 4,
+                'rad'   : 3,
+                'der'   : 3,
+                'ent'   : 3,
+                'fam'   : 2
+            },
+            {
+                'med4'  : 12,
+                'sur4'  : 12,
+                'gyn2'  : 10,
+                'ped2'  : 10,
+            }
+        ];        
+        stgUnits = [35, 39, 45, 46, 44, 44];
+        stgPercent = [5, 5, 5, 20, 25, 40];
+    }
 
     // select the stage
 
