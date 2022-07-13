@@ -117,6 +117,8 @@ var stage = 0;
 
 const contaienr = document.getElementById("container");
 
+var degPart = 0;
+
 
 // Next Button Function
 
@@ -131,6 +133,9 @@ const nextButtonAction = function (stg)
 
     var classD = document.getElementById(`classDeg${prevStg}`);
 
+    var totalStgDeg = 0;
+
+
     if(classD.value > 0)
     {
         totalStgDeg = classD.value;
@@ -139,7 +144,6 @@ const nextButtonAction = function (stg)
         // Collect subject values
         var subjects = document.querySelectorAll(`#stage${prevStg} .subject`);
 
-        var totalStgDeg = 0;
 
 
         // Multiply each subject by it units
@@ -157,28 +161,19 @@ const nextButtonAction = function (stg)
 
     finalRes += (stgPercent[prevStg - 1] * totalStgDeg) / 100;
 
+    // Total Part of Deg
+
+    degPart += stgPercent[prevStg - 1];
+
+
     // Check the stage
     if(nextStg == stage) {
         // Show the Result
         document.getElementById("result").style = 'display: block';
 
-        if(stage == 2) {
-            finalRes = (finalRes * 100) / 5;
-        }
-        if(stage == 3) {
-            finalRes = (finalRes * 100) / 10;
-        }
-        if(stage == 4) {
-            finalRes = (finalRes * 100) / 15;
-        }
-        if(stage == 5) {
-            finalRes = (finalRes * 100) / 35;
-        }
-        if(stage == 6) {
-            finalRes = (finalRes * 100) / 60;
-        }
 
-        document.querySelector('#result #res').innerHTML = `${finalRes.toFixed(2)} - ${(finalRes + 10).toFixed(2)}`;
+
+        document.querySelector('#result #res').innerHTML = `${finalRes.toFixed(2)} - ${(finalRes + (degPart / 10)).toFixed(2)} / ${degPart}`;
 
     } else {        
         // show the next stage
